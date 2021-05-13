@@ -1,3 +1,6 @@
+"Install Instructions:
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim" run vim -> ':PlugInstall'
+
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'dense-analysis/ale'
@@ -76,14 +79,9 @@ let g:ale_fix_on_save = 1
 let g:ale_completion_enabled = 1
 nnoremap <C-LeftMouse> :ALEGoToDefinition<CR>
 
-let g:ale_fixers = {
-    'python': ['black', 'isort'],
-    'rust': ['rustfmt']
-}
+let g:ale_fixers = { 'python': ['black', 'isort'], 'rust': ['rustfmt'] }
 
-let g:ale_linters = {
-    'rust': ['rls', 'cargo']
-}
+let g:ale_linters = { 'rust': ['rls', 'cargo'] }
 
 syntax on
 
