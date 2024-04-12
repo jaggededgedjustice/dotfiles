@@ -125,7 +125,7 @@ lspconfig.jdtls.setup({
 
 	local luacheck = require("efmls-configs.linters.luacheck")
 	local stylua = require("efmls-configs.formatters.stylua")
-	local flake8 = require("efmls-configs.linters.flake8")
+	local isort = require("efmls-configs.formatters.isort")
 	local black = require("efmls-configs.formatters.black")
 	local eslint = require("efmls-configs.linters.eslint")
 	local prettier_d = require("efmls-configs.formatters.prettier_d")
@@ -162,7 +162,7 @@ lspconfig.jdtls.setup({
 		settings = {
 			languages = {
 				lua = { luacheck, stylua },
-				python = { flake8, black },
+				python = { isort, black },
 				typescript = { eslint, prettier_d },
 				json = { eslint, fixjson },
 				jsonc = { eslint, fixjson },
